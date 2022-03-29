@@ -4,9 +4,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: infused-kim
+      url-base: https://github.com/infused-kim/zmk/commits/mychanges/split-encoder
   projects:
     - name: zmk
-      remote: caksoylar
+      remote: infused-kim
       revision: split-encoder
       import: app/west.yml
   self:
