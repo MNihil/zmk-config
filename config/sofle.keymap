@@ -15,9 +15,10 @@
         ps1macro: ps1macro {
             label = "ZM_ps1macro";
             compatible = "zmk,behavior-macro";
+            wait-ms = <100>;
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mt LSHIFT S &kp E &kp R &kp I &kp E &mt LSHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
+                = <&macro_tap &pht LSHIFT S &kp E &kp R &kp I &kp E &pht LSHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
                 ;
         };
     };
