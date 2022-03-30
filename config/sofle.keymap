@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+
+
 / {
     macros {
         ps1macro: ps1macro {
@@ -15,13 +17,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp S &kp e &kp r &kp i &kp e &kp F &kp 1 &kp 1 &kp 2 &kp 3 &kp 5 &kp 8 &kp 1 &kp 3 &kp 0 &kp EXCL &kp EXCL>
+                = <&macro_tap &mt LSHIFT S &kp E &kp R &kp I &kp E &mt LSHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
                 ;
         };
     };
-};
 
-/ {
     keymap {
         compatible = "zmk,keymap";
 
