@@ -18,7 +18,7 @@
             wait-ms = <100>;
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &pht LSHIFT S &kp E &kp R &kp I &kp E &pht LSHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
+                = <&macro_tap &pht LEFT_SHIFT S &kp E &kp R &kp I &kp E &pht LEFT_SHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
                 ;
         };
     };
