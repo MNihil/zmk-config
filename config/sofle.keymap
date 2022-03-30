@@ -11,27 +11,22 @@
 
 
 / {
-    behaviors {
-        pht: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <60>;
-            bindings = <&kp>, <&kp>;
-            //hold-trigger-key-positions = <1>;    // <---[[the W key]]
-        };
-    };
     
     macros {
         ps1macro: ps1macro {
             label = "ZM_ps1macro";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;
+            wait-ms = <50>;
             bindings
-                = <&macro_tap &pht LEFT_SHIFT S &kp E &kp R &kp I &kp E &pht LEFT_SHIFT F &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
+                = <&macro_press &kp LSHFT>,
+                <&macro_tap &kp S>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp E &kp R &kp I &kp E>,
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp F>,
+                <&macro_release &kp LSHFT>,
+                <&macro_tap &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
                 ;
         };
     };
