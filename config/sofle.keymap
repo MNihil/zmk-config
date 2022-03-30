@@ -17,9 +17,9 @@
             label = "ZM_mps01";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <30>;
             bindings
-                = <&macro_tap_time 10>,
+                = <&macro_tap_time 30>,
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp S>,
                 <&macro_release &kp LSHFT>,
@@ -27,7 +27,7 @@
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp F>,
                 <&macro_release &kp LSHFT>,
-                <&macro_tap &kp N1 &kp N1 &kp N2 &kp N3 &kp N5 &kp N8 &kp N1 &kp N3 &kp N0 &kp EXCL &kp EXCL>
+                <&macro_tap &kp N1 &kp N1 &kp N2 &kp N3 &kp N0 &kp EXCL &kp EXCL>
                 ;
         };
     };
