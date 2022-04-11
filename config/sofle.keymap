@@ -19,9 +19,9 @@
             label = "ZM_mc01_psc01";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;
+            wait-ms = <30>;
             bindings
-                = <&macro_tap_time 30>,
+                = <&macro_tap_time 50>,
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp S>,
                 <&macro_release &kp LSHFT>,
