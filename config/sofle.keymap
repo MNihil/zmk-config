@@ -19,7 +19,7 @@
             label = "ZM_mc01_psc01";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <100>;
             bindings
                 = <&macro_tap_time 30>,
                 <&macro_press &kp LSHFT>,
@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_Maintain_Q";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp LCTRL>, <&kp LCTRL>, <&sk LCTRL> ;
         };
     };
