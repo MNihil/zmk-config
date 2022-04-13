@@ -21,7 +21,7 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             bindings
-                = <&macro_tap_time 50>,
+                = <&macro_tap_time 60>,
                 <&macro_press &kp LSHFT>,
                 <&macro_tap &kp S>,
                 <&macro_release &kp LSHFT>,
