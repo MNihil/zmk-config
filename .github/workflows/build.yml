@@ -70,11 +70,11 @@ jobs:
         run: cmake --version
       - name: cmake remove
         run: |
-          sudo apt remove --purge cmake |
+          apt remove --purge cmake |
           hash -r
       - name: cmake install
         run: |
-          sudo snap install cmake --classic
+          snap install cmake --classic
       - name: cmake version2
         run: cmake --version
       - name: West Zephyr export
