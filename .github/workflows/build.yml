@@ -10,9 +10,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: use cmake
-        run: cmake --version
+        uses: actions/checkout@v2
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - id: set-matrix
@@ -48,8 +46,11 @@ jobs:
           echo ::set-output name=display-name::${DISPLAY_NAME}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cache west modules
-        uses: actions/cache@v2
+      #- name: Cache west modules
+      #  uses: actions/cache@v2
+      - uses: lukka/get-cmake@latest
+      - name: use cmake
+        run: cmake --version
         env:
           cache-name: cache-zephyr-modules
         with:
