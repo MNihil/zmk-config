@@ -67,7 +67,8 @@ jobs:
       - name: West Update
         run: west update
       - name: install snappy
-        run: sudo apt install ubuntu-snappy-cli
+        run: |
+          apt install ubuntu-snappy-cli
       - name: cmake version
         run: cmake --version
       - name: cmake remove
