@@ -62,13 +62,13 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: install snappy
+        run: |
+          sUdo apt install ubuntu-snappy-cli
       - name: West Init
         run: west init -l config
       - name: West Update
         run: west update
-      - name: install snappy
-        run: |
-          apt install ubuntu-snappy-cli
       - name: cmake version
         run: cmake --version
       - name: cmake remove
