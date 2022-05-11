@@ -49,8 +49,6 @@ jobs:
       #- name: Cache west modules
       #  uses: actions/cache@v2
       - uses: lukka/get-cmake@latest
-      - name: use cmake
-        run: cmake --version
         env:
           cache-name: cache-zephyr-modules
         with:
