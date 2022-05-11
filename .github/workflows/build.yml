@@ -46,9 +46,8 @@ jobs:
           echo ::set-output name=display-name::${DISPLAY_NAME}
       - name: Checkout
         uses: actions/checkout@v2
-      #- name: Cache west modules
-      #  uses: actions/cache@v2
-      - uses: lukka/get-cmake@latest
+      - name: Cache west modules
+        uses: actions/cache@v2
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -67,6 +66,17 @@ jobs:
         run: west init -l config
       - name: West Update
         run: west update
+      - name: cmake version
+        run: cmake --version
+      - name: cmake remove
+        run: |
+          sudo apt remove --purge cmake |
+          hash -r
+      - name: cmake install
+        run: |
+          sudo snap install cmake --classic
+      - name: cmake version2
+        run: cmake --version
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (${{ steps.variables.outputs.display-name }})
