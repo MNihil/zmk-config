@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cmake
+      - name: use cmake
         run: cmake --version
       - name: Install yaml2json
         run: python3 -m pip install remarshal
