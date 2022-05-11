@@ -9,12 +9,10 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v1.12
-        with:
-          cmake-version: '3.20.x'
       - name: Checkout
         uses: actions/checkout@V2
+      - name: Cmake
+        run: cmake --version
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - id: set-matrix
