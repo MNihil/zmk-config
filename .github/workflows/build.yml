@@ -62,8 +62,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: install snappy
-        run: apt install ubuntu-snappy-cli
       - name: West Init
         run: west init -l config
       - name: West Update
@@ -76,7 +74,13 @@ jobs:
           hash -r
       - name: cmake install
         run: |
-          sudo snap install cmake --classic
+          sudo apt install build-essential libssl-dev |
+          wget https://github.com/Kitware/CMake/releases/download/v3.20.2/cmake-3.20.2.tar.gz |
+          tar -zxvf cmake-3.20.2.tar.gz |
+          cd cmake-3.20.2 |
+          ./bootstrap |
+          make |
+          sudo make install 
       - name: cmake version2
         run: cmake --version
       - name: West Zephyr export
