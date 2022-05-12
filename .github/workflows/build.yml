@@ -63,8 +63,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: install snappy
-        run: |
-          sudo apt install ubuntu-snappy-cli
+        run: apt install ubuntu-snappy-cli
       - name: West Init
         run: west init -l config
       - name: West Update
