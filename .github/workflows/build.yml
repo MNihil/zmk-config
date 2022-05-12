@@ -66,23 +66,6 @@ jobs:
         run: west init -l config
       - name: West Update
         run: west update
-      - name: cmake version
-        run: cmake --version
-      - name: cmake remove
-        run: |
-          sudo apt remove --purge cmake |
-          hash -r
-      - name: cmake install
-        run: |
-          apt install build-essential libssl-dev |
-          wget https://github.com/Kitware/CMake/releases/download/v3.20.2/cmake-3.20.2.tar.gz |
-          tar -zxvf cmake-3.20.2.tar.gz |
-          cd cmake-3.20.2 |
-          ./bootstrap |
-          make |
-          make install 
-      - name: cmake version2
-        run: cmake --version
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (${{ steps.variables.outputs.display-name }})
